@@ -1,0 +1,43 @@
+# Quick way for webserver to reference what is in the library. 
+# submodules
+repository_name: "Repository"
+path: testing\Repository
+dump: testing\dump
+remotes:
+  symbols:
+  - uri: "https://gitlab.com/kicad/libraries/kicad-symbols.git"
+    name: kicad-symbols
+    base_env: ${KICAD7_SYMBOL_DIR}
+    envs:
+      - ${Kicad_7.0_Footprints}: ${root}
+      - ${Kicad_6.0_Footprints}: ${root}
+  footprints:
+  - uri: "https://gitlab.com/kicad/libraries/kicad-footprints.git"
+    name: kicad-footprints
+    base_env: ${KICAD7_FOOTPRINT_DIR}
+    envs:
+      - ${Kicad_7.0_Footprints}: ${root}
+      - ${Kicad_6.0_Footprints}: ${root}
+  packages3d:
+  - uri: "https://gitlab.com/kicad/libraries/kicad-packages3d.git"
+    name: kicad-packages3d.git
+  templates:
+  - uri: "https://gitlab.com/kicad/libraries/kicad-templates.git"
+    name: kicad-templates
+
+# Catalogue of what components are in the file tree.`
+libraries:
+  symbols:
+    capacitor:
+      - part1
+      - part2
+    resistors:
+      - part1
+      - part2
+  footprints:
+    capc:
+      - 0805
+
+# defaults
+svg_path: ".\\svgs"
+root_env: ${root}

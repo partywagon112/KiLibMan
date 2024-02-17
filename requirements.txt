@@ -1,0 +1,10 @@
+tqdm
+gitpython
+kiutils
+appdata
+gitpython
+fastapi
+dash
+flask
+pfluent
+pyyaml
